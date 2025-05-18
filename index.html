@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio Duván</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Desarrollador Spring Boot</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
 <header class="header">
     <div class="container">
         <div class="logo">
-            <h1>Duván González</h1>
+            <h1>Tu Nombre</h1>
         </div>
         <nav class="nav">
             <ul class="nav-list">
@@ -26,10 +29,10 @@
             </div>
         </nav>
         <div class="social-icons">
-            <a href="https://github.com/tuusuario" target="_blank" class="social-icon">
+            <a href="https://github.com/DUVAN0829" target="_blank" class="social-icon">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://linkedin.com/in/tuusuario" target="_blank" class="social-icon">
+            <a href="https://www.linkedin.com/in/duvan-darío-castillo-gonzález-bbb127346/" target="_blank" class="social-icon">
                 <i class="fab fa-linkedin"></i>
             </a>
         </div>
@@ -42,11 +45,12 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Duván González</h1>
-                    <h2 class="hero-subtitle">Desarrollador Backend</h2>
+                    <h1 class="hero-title">Tu Nombre</h1>
+                    <h2 class="hero-subtitle">Desarrollador Spring Boot</h2>
                     <p class="hero-description">
-                        Especializado en crear APIs robustas y soluciones escalables. Con experiencia en Node.js, Python
-                        y bases de datos SQL/NoSQL.
+                        Especializado en el desarrollo de aplicaciones empresariales robustas y escalables con Spring Boot.
+                        Experiencia en arquitecturas de microservicios, seguridad con JWT, despliegues en la nube con Docker y Kubernetes,
+                        y diseño de APIs RESTful documentadas con Swagger.
                     </p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">Ver proyectos</a>
@@ -73,25 +77,25 @@
                 <!-- Project Card 1 -->
                 <div class="project-card">
                     <div class="card-header">
-                        <h3 class="card-title">API REST con Node.js</h3>
+                        <h3 class="card-title">Microservicios con Spring Cloud</h3>
                     </div>
                     <div class="card-body">
                         <p class="card-description">
-                            API RESTful desarrollada con Express y MongoDB para gestión de usuarios y autenticación.
+                            Arquitectura de microservicios implementada con Spring Boot y Spring Cloud. Incluye service discovery con Eureka,
+                            API Gateway, Circuit Breaker con Resilience4j y configuración centralizada con Config Server.
                         </p>
                         <div class="tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Express</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">JWT</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Spring Cloud</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Kubernetes</span>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="https://github.com/tuusuario/api-rest-nodejs" target="_blank"
-                           class="btn btn-sm btn-outline">
+                        <a href="https://github.com/tuusuario/spring-microservices" target="_blank" class="btn btn-sm btn-outline">
                             <i class="fab fa-github"></i> Código
                         </a>
-                        <a href="https://api-demo.tudominio.com" target="_blank" class="btn btn-sm">
+                        <a href="https://microservices-demo.tudominio.com" target="_blank" class="btn btn-sm">
                             <i class="fas fa-external-link-alt"></i> Demo
                         </a>
                     </div>
@@ -100,24 +104,26 @@
                 <!-- Project Card 2 -->
                 <div class="project-card">
                     <div class="card-header">
-                        <h3 class="card-title">Microservicios con Python</h3>
+                        <h3 class="card-title">Sistema de Autenticación JWT</h3>
                     </div>
                     <div class="card-body">
                         <p class="card-description">
-                            Arquitectura de microservicios implementada con FastAPI y comunicación asíncrona mediante
-                            RabbitMQ.
+                            Sistema completo de autenticación y autorización implementado con Spring Security y JWT.
+                            Incluye roles, permisos, refresh tokens y protección contra ataques comunes.
                         </p>
                         <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">RabbitMQ</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Spring Security</span>
+                            <span class="tag">JWT</span>
+                            <span class="tag">PostgreSQL</span>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="https://github.com/tuusuario/python-microservices" target="_blank"
-                           class="btn btn-sm btn-outline">
+                        <a href="https://github.com/tuusuario/spring-security-jwt" target="_blank" class="btn btn-sm btn-outline">
                             <i class="fab fa-github"></i> Código
+                        </a>
+                        <a href="https://jwt-demo.tudominio.com" target="_blank" class="btn btn-sm">
+                            <i class="fas fa-external-link-alt"></i> Demo
                         </a>
                     </div>
                 </div>
@@ -125,26 +131,50 @@
                 <!-- Project Card 3 -->
                 <div class="project-card">
                     <div class="card-header">
-                        <h3 class="card-title">Sistema de Autenticación</h3>
+                        <h3 class="card-title">API RESTful con Documentación Swagger</h3>
                     </div>
                     <div class="card-body">
                         <p class="card-description">
-                            Sistema completo de autenticación y autorización con roles y permisos personalizables.
+                            API RESTful desarrollada con Spring Boot y documentada con Swagger/OpenAPI.
+                            Implementa buenas prácticas de diseño, validación de datos y manejo de excepciones.
                         </p>
                         <div class="tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">Redis</span>
-                            <span class="tag">OAuth</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Swagger</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">JUnit</span>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="https://github.com/tuusuario/auth-system" target="_blank"
-                           class="btn btn-sm btn-outline">
+                        <a href="https://github.com/tuusuario/spring-rest-api" target="_blank" class="btn btn-sm btn-outline">
                             <i class="fab fa-github"></i> Código
                         </a>
-                        <a href="https://auth-demo.tudominio.com" target="_blank" class="btn btn-sm">
-                            <i class="fas fa-external-link-alt"></i> Demo
+                        <a href="https://api.tudominio.com/swagger-ui.html" target="_blank" class="btn btn-sm">
+                            <i class="fas fa-external-link-alt"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3 class="card-title">CI/CD Pipeline para Spring Boot</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Pipeline de integración y despliegue continuo para aplicaciones Spring Boot.
+                            Utiliza GitHub Actions, pruebas automatizadas, análisis de código con SonarQube y despliegue en AWS.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">CI/CD</span>
+                            <span class="tag">GitHub Actions</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/tuusuario/spring-cicd-pipeline" target="_blank" class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> Código
                         </a>
                     </div>
                 </div>
@@ -165,14 +195,16 @@
                 <!-- Skill Category 1 -->
                 <div class="skill-card">
                     <div class="card-header">
-                        <h3 class="card-title">Lenguajes</h3>
+                        <h3 class="card-title">Lenguajes & Frameworks</h3>
                     </div>
                     <div class="card-body">
                         <div class="tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Go</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Spring MVC</span>
+                            <span class="tag">Spring Data JPA</span>
+                            <span class="tag">Spring Security</span>
+                            <span class="tag">Spring Cloud</span>
                         </div>
                     </div>
                 </div>
@@ -180,14 +212,14 @@
                 <!-- Skill Category 2 -->
                 <div class="skill-card">
                     <div class="card-header">
-                        <h3 class="card-title">Frameworks</h3>
+                        <h3 class="card-title">Bases de Datos</h3>
                     </div>
                     <div class="card-body">
                         <div class="tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Express</span>
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">Django</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">MongoDB</span>
                         </div>
                     </div>
                 </div>
@@ -195,14 +227,15 @@
                 <!-- Skill Category 3 -->
                 <div class="skill-card">
                     <div class="card-header">
-                        <h3 class="card-title">Bases de Datos</h3>
+                        <h3 class="card-title">DevOps & Cloud</h3>
                     </div>
                     <div class="card-body">
                         <div class="tags">
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">Redis</span>
-                            <span class="tag">MySQL</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">CI/CD</span>
+                            <span class="tag">GitHub Actions</span>
                         </div>
                     </div>
                 </div>
@@ -210,15 +243,17 @@
                 <!-- Skill Category 4 -->
                 <div class="skill-card">
                     <div class="card-header">
-                        <h3 class="card-title">DevOps</h3>
+                        <h3 class="card-title">Herramientas & Metodologías</h3>
                     </div>
                     <div class="card-body">
                         <div class="tags">
-                            <span class="tag">Docker</span>
-                            <span class="tag">Kubernetes</span>
-                            <span class="tag">CI/CD</span>
-                            <span class="tag">AWS</span>
-                            <span class="tag">GCP</span>
+                            <span class="tag">Swagger/OpenAPI</span>
+                            <span class="tag">JUnit</span>
+                            <span class="tag">Mockito</span>
+                            <span class="tag">Maven</span>
+                            <span class="tag">Gradle</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">Agile/Scrum</span>
                         </div>
                     </div>
                 </div>
@@ -272,7 +307,6 @@
     </div>
 </footer>
 
-<script src="script.js" > </script>
-
+<script src="script.js"></script>
 </body>
 </html>

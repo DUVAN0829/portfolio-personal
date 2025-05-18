@@ -6,8 +6,8 @@
 }
 
 :root {
-    --primary-color: #4f46e5;
-    --primary-hover: #4338ca;
+    --primary-color: #6db33f; /* Color verde de Spring */
+    --primary-hover: #4e9525;
     --secondary-color: #f3f4f6;
     --text-color: #1f2937;
     --text-light: #6b7280;
