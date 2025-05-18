@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Duván</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <h1>Duván González</h1>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <div class="social-icons">
+            <a href="https://github.com/tuusuario" target="_blank" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/tuusuario" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section id="about" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Duván González</h1>
+                    <h2 class="hero-subtitle">Desarrollador Backend</h2>
+                    <p class="hero-description">
+                        Especializado en crear APIs robustas y soluciones escalables. Con experiencia en Node.js, Python
+                        y bases de datos SQL/NoSQL.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+                        <a href="#contact" class="btn btn-outline">Contactar</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/400" alt="Foto de perfil" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proyectos</h2>
+                <p class="section-description">
+                    Estos son algunos de mis proyectos destacados en GitHub.
+                </p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3 class="card-title">API REST con Node.js</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            API RESTful desarrollada con Express y MongoDB para gestión de usuarios y autenticación.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">JWT</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/tuusuario/api-rest-nodejs" target="_blank"
+                           class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> Código
+                        </a>
+                        <a href="https://api-demo.tudominio.com" target="_blank" class="btn btn-sm">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Microservicios con Python</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Arquitectura de microservicios implementada con FastAPI y comunicación asíncrona mediante
+                            RabbitMQ.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">RabbitMQ</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/tuusuario/python-microservices" target="_blank"
+                           class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Sistema de Autenticación</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Sistema completo de autenticación y autorización con roles y permisos personalizables.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">OAuth</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/tuusuario/auth-system" target="_blank"
+                           class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> Código
+                        </a>
+                        <a href="https://auth-demo.tudominio.com" target="_blank" class="btn btn-sm">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Habilidades</h2>
+                <p class="section-description">
+                    Tecnologías y herramientas con las que trabajo.
+                </p>
+            </div>
+            <div class="skills-grid">
+                <!-- Skill Category 1 -->
+                <div class="skill-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Lenguajes</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Go</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="skill-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Frameworks</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Django</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="skill-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Bases de Datos</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="tags">
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 4 -->
+                <div class="skill-card">
+                    <div class="card-header">
+                        <h3 class="card-title">DevOps</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="tags">
+                            <span class="tag">Docker</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">CI/CD</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">GCP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-description">
+                    ¿Interesado en trabajar juntos? Contáctame a través de cualquiera de estos medios.
+                </p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:tu@email.com">tu@email.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p class="copyright">
+            © <span id="current-year"></span> Tu Nombre. Todos los derechos reservados.
+        </p>
+        <div class="social-icons">
+            <a href="https://github.com/tuusuario" target="_blank" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/tuusuario" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:tu@email.com" class="social-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js" > </script>
+
+</body>
+</html>
