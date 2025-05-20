@@ -352,8 +352,7 @@ section {
 
 .footer .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
 }
 
 .copyright {
