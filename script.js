@@ -1,97 +1,123 @@
-// Actualizar el año actual en el footer
-document.getElementById('current-year').textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', function() {
+    // Tecnologías para el carrusel
+    const technologies = [
+        { name: "Node.js", icon: "N" },
+        { name: "Express", icon: "E" },
+        { name: "Python", icon: "P" },
+        { name: "Django", icon: "D" },
+        { name: "FastAPI", icon: "F" },
+        { name: "MongoDB", icon: "M" },
+        { name: "PostgreSQL", icon: "P" },
+        { name: "MySQL", icon: "M" },
+        { name: "Redis", icon: "R" },
+        { name: "Docker", icon: "D" },
+        { name: "Kubernetes", icon: "K" },
+        { name: "AWS", icon: "A" },
+        { name: "Git", icon: "G" },
+        { name: "CI/CD", icon: "C" },
+        { name: "GraphQL", icon: "G" },
+        { name: "REST API", icon: "R" }
+    ];
 
-// Menú hamburguesa para dispositivos móviles
-const hamburger = document.querySelector('.hamburger');
-const navList = document.querySelector('.nav-list');
+    // Función para crear elementos del carrusel
+    function createTechItems() {
+        const slider = document.querySelector('.tech-slider');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navList.classList.toggle('active');
-});
+        // Crear los elementos originales
+        technologies.forEach(tech => {
+            const techItem = document.createElement('div');
+            techItem.className = 'tech-item';
 
-// Cerrar el menú al hacer clic en un enlace
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navList.classList.remove('active');
+            const techIcon = document.createElement('div');
+            techIcon.className = 'tech-icon';
+            techIcon.textContent = tech.icon;
+
+            const techName = document.createElement('span');
+            techName.className = 'tech-name';
+            techName.textContent = tech.name;
+
+            techItem.appendChild(techIcon);
+            techItem.appendChild(techName);
+            slider.appendChild(techItem);
+        });
+
+        // Duplicar los elementos para crear el efecto infinito
+        technologies.forEach(tech => {
+            const techItem = document.createElement('div');
+            techItem.className = 'tech-item';
+
+            const techIcon = document.createElement('div');
+            techIcon.className = 'tech-icon';
+            techIcon.textContent = tech.icon;
+
+            const techName = document.createElement('span');
+            techName.className = 'tech-name';
+            techName.textContent = tech.name;
+
+            techItem.appendChild(techIcon);
+            techItem.appendChild(techName);
+            slider.appendChild(techItem);
+        });
+    }
+
+    // Inicializar el carrusel
+    createTechItems();
+
+    // Navegación activa según la sección visible
+    const sections = document.querySelectorAll('.section');
+    const navItems = document.querySelectorAll('.navigation li');
+
+    // Función para actualizar la navegación activa basada en la sección visible
+    function updateActiveNav() {
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (pageYOffset >= (sectionTop - 300)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navItems.forEach(li => {
+            li.classList.remove('active');
+            const link = li.querySelector('a');
+            if (link && link.getAttribute('href') === `#${current}`) {
+                li.classList.add('active');
+            }
+        });
+    }
+
+    // Escuchar el evento de scroll para actualizar la navegación
+    window.addEventListener('scroll', updateActiveNav);
+
+    // Navegación suave al hacer clic en los enlaces
+    document.querySelectorAll('.navigation a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+
+                // Actualizar la URL con el hash
+                history.pushState(null, null, targetId);
+
+                // Actualizar la navegación activa
+                navItems.forEach(li => {
+                    li.classList.remove('active');
+                });
+                this.parentElement.classList.add('active');
+            }
+        });
     });
-});
 
-// Animación de desplazamiento suave para los enlaces de navegación
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 70, // Ajuste para el header fijo
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Resaltar enlace de navegación activo según la sección visible
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    let currentSection = '';
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-
-        if (pageYOffset >= sectionTop - 100) {
-            currentSection = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSection}`) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// Animación de aparición al hacer scroll
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-        }
-    });
-}, observerOptions);
-
-// Observar todos los elementos que queremos animar
-document.querySelectorAll('.project-card, .skill-card, .section-header, .hero-content, .contact-info').forEach(el => {
-    observer.observe(el);
-});
-
-// Añadir clase para la animación
-document.addEventListener('DOMContentLoaded', () => {
-    const style = document.createElement('style');
-    style.textContent = `
-        .project-card, .skill-card, .section-header, .hero-content, .contact-info {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .animate-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    `;
-    document.head.appendChild(style);
+    // Inicializar la navegación activa al cargar la página
+    updateActiveNav();
 });

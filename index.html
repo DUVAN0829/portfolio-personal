@@ -3,261 +3,400 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Desarrollador Spring Boot</title>
+    <title>Portfolio - Backend Developer</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Añadir fuente Inter de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="header">
-    <div class="container">
-        <div class="logo">
-            <h1>Tu Nombre</h1>
-        </div>
-        <nav class="nav">
-
-            <ul class="nav-list">
-                <li><a href="#about" class="nav-link">Sobre mí</a></li>
-                <li><a href="#projects" class="nav-link">Proyectos</a></li>
-                <li><a href="#skills" class="nav-link">Habilidades</a></li>
-                <li><a href="#contact" class="nav-link">Contacto</a></li>
-            </ul>
-
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-
-        </nav>
-
+<div class="portfolio-container">
+    <!-- Background pattern -->
+    <div class="background-pattern">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+                    <path d="M 100 0 L 0 0 0 100" fill="none" stroke="white" stroke-width="0.5" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
     </div>
-</header>
 
-<main>
-    <!-- Hero Section -->
-    <section id="about" class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Tu Nombre</h1>
-                    <h2 class="hero-subtitle">Desarrollador Spring Boot</h2>
-                    <p class="hero-description">
-                        Especializado en el desarrollo de aplicaciones empresariales robustas y escalables con Spring Boot.
-                        Experiencia en arquitecturas de microservicios, seguridad con JWT, despliegues en la nube con Docker y Kubernetes,
-                        y diseño de APIs RESTful documentadas con Swagger.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">Ver proyectos</a>
-                        <a href="#contact" class="btn btn-outline">Contactar</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="https://via.placeholder.com/400" alt="Foto de perfil" class="profile-image">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Proyectos</h2>
-                <p class="section-description">
-                    Estos son algunos de mis proyectos destacados en GitHub.
-                </p>
-            </div>
-            <div class="projects-grid">
-                <!-- Project Card 1 -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <h3 class="card-title">Microservicios con Spring Cloud</h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-description">
-                            Arquitectura de microservicios implementada con Spring Boot y Spring Cloud. Incluye service discovery con Eureka,
-                            API Gateway, Circuit Breaker con Resilience4j y configuración centralizada con Config Server.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">Spring Boot</span>
-                            <span class="tag">Spring Cloud</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">Kubernetes</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/tuusuario/spring-microservices" target="_blank" class="btn btn-sm btn-outline">
-                            <i class="fab fa-github"></i> Código
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project Card 2 -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <h3 class="card-title">Sistema de Autenticación JWT</h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-description">
-                            Sistema completo de autenticación y autorización implementado con Spring Security y JWT.
-                            Incluye roles, permisos, refresh tokens y protección contra ataques comunes.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">Spring Boot</span>
-                            <span class="tag">Spring Security</span>
-                            <span class="tag">JWT</span>
-                            <span class="tag">PostgreSQL</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/tuusuario/spring-security-jwt" target="_blank" class="btn btn-sm btn-outline">
-                            <i class="fab fa-github"></i> Código
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project Card 4 -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <h3 class="card-title">CI/CD Pipeline para Spring Boot</h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-description">
-                            Pipeline de integración y despliegue continuo para aplicaciones Spring Boot.
-                            Utiliza GitHub Actions, pruebas automatizadas, análisis de código con SonarQube y despliegue en AWS.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">CI/CD</span>
-                            <span class="tag">GitHub Actions</span>
-                            <span class="tag">AWS</span>
-                            <span class="tag">Docker</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/tuusuario/spring-cicd-pipeline" target="_blank" class="btn btn-sm btn-outline">
-                            <i class="fab fa-github"></i> Código
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Habilidades</h2>
-                <p class="section-description">
-                    Tecnologías y herramientas con las que trabajo.
-                </p>
-            </div>
-            <div class="skills-grid">
-                <!-- Skill Category 1 -->
-                <div class="skill-card">
-                    <div class="card-header">
-                        <h3 class="card-title">Lenguajes & Frameworks</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">Spring Boot</span>
-                            <span class="tag">Spring MVC</span>
-                            <span class="tag">Spring Data JPA</span>
-                            <span class="tag">Spring Security</span>
-                            <span class="tag">Spring Cloud</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Skill Category 2 -->
-                <div class="skill-card">
-                    <div class="card-header">
-                        <h3 class="card-title">Bases de Datos</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="tags">
-                            <span class="tag">SQLite</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Skill Category 3 -->
-                <div class="skill-card">
-                    <div class="card-header">
-                        <h3 class="card-title">DevOps & Cloud</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="tags">
-                            <span class="tag">Docker</span>
-                            <span class="tag">Kubernetes</span>
-                            <span class="tag">AWS</span>
-                            <span class="tag">CI/CD</span>
-                            <span class="tag">GitHub Actions</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Skill Category 4 -->
-                <div class="skill-card">
-                    <div class="card-header">
-                        <h3 class="card-title">Herramientas & Metodologías</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="tags">
-                            <span class="tag">Swagger/OpenAPI</span>
-                            <span class="tag">JUnit</span>
-                            <span class="tag">Mockito</span>
-                            <span class="tag">Maven</span>
-                            <span class="tag">Gradle</span>
-                            <span class="tag">Git</span>
-                            <span class="tag">Agile/Scrum</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contacto</h2>
-                <p class="section-description">
-                    ¿Interesado en trabajar juntos? Contáctame a través de cualquiera de estos medios.
-                </p>
-            </div>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:tu@email.com">duvancasgonz29@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-
-<footer class="footer">
     <div class="container">
-        <p class="copyright">
-            © <span id="current-year"></span> Duván González. Todos los derechos reservados.
-        </p>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <!-- Profile Image -->
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="https://via.placeholder.com/200" alt="Profile" />
+                    </div>
+                    <h1 class="profile-name">Tu Nombre</h1>
+                    <p class="profile-title">Backend Developer</p>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-mail"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                        </div>
+                        <div>
+                            <p class="contact-label">EMAIL</p>
+                            <a href="mailto:tunombre@ejemplo.com" class="contact-value">tunombre@ejemplo.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="contact-label">TELÉFONO</p>
+                            <a href="tel:+34123456789" class="contact-value">+34 123 456 789</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </div>
+                        <div>
+                            <p class="contact-label">LINKEDIN</p>
+                            <a href="https://linkedin.com/in/tunombre" target="_blank" rel="noopener noreferrer" class="contact-value">tunombre</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                        </div>
+                        <div>
+                            <p class="contact-label">GITHUB</p>
+                            <a href="https://github.com/tunombre" target="_blank" rel="noopener noreferrer" class="contact-value">@tunombre</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div>
+                            <p class="contact-label">UBICACIÓN</p>
+                            <p class="contact-value">Tu Ciudad, País</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="social-media">
+                    <a href="https://github.com/tunombre" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                    </a>
+                    <a href="https://twitter.com/tunombre" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                    </a>
+                    <a href="https://instagram.com/tunombre" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Navigation -->
+            <nav class="navigation">
+                <ul>
+                    <li class="active"><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#endeavors">Endeavors</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- About Me Section -->
+            <section id="about" class="section">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-title-underline"></div>
+                <p class="section-text">
+                    Soy un desarrollador backend apasionado especializado en crear APIs robustas y sistemas escalables. Me
+                    encanta explorar nuevas tecnologías y sumergirme en proyectos de código abierto. Mi experiencia se centra
+                    en diseñar arquitecturas eficientes, optimizar bases de datos y desarrollar soluciones que resuelven
+                    problemas complejos con código limpio y mantenible.
+                </p>
+                <p class="section-text">
+                    Mi objetivo es crecer continuamente como desarrollador y aportar soluciones técnicas sólidas a cada
+                    proyecto que emprendo, siempre buscando la mejor manera de resolver problemas complejos.
+                </p>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section">
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="section-title-underline"></div>
+
+                <div class="tech-slider-container">
+                    <div class="tech-slider">
+                        <!-- Los elementos se duplicarán con JavaScript para crear el efecto infinito -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section">
+                <h2 class="section-title">Projects</h2>
+                <div class="section-title-underline"></div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-server"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect><rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg>
+                            <h3 class="project-title">API RESTful de Gestión de Tareas</h3>
+                        </div>
+
+                        <p class="project-description">
+                            API RESTful completa para gestión de tareas con autenticación JWT, roles de usuario, y documentación
+                            Swagger. Incluye tests unitarios y de integración.
+                        </p>
+
+                        <div class="project-features">
+                            <div class="feature-label">Características principales:</div>
+                            <ul class="feature-list">
+                                <li>Autenticación y autorización con JWT</li>
+                                <li>Endpoints para CRUD de tareas y usuarios</li>
+                                <li>Validación de datos con Joi/Zod</li>
+                                <li>Documentación con Swagger/OpenAPI</li>
+                                <li>Tests con Jest y Supertest</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-tech">
+                            <div class="tech-label">Tecnologías:</div>
+                            <div class="tech-badges">
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">Express</span>
+                                <span class="tech-badge">MongoDB</span>
+                                <span class="tech-badge">JWT</span>
+                                <span class="tech-badge">Swagger</span>
+                            </div>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/tunombre/task-api" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                <span>Ver en GitHub</span>
+                            </a>
+                            <a href="https://api-docs-example.com" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+                                <span>Ver Documentación</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-database"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                            <h3 class="project-title">Microservicio de Procesamiento de Datos</h3>
+                        </div>
+
+                        <p class="project-description">
+                            Microservicio para procesamiento y análisis de grandes volúmenes de datos. Implementa colas de
+                            mensajes para procesamiento asíncrono y almacenamiento en bases de datos NoSQL.
+                        </p>
+
+                        <div class="project-features">
+                            <div class="feature-label">Características principales:</div>
+                            <ul class="feature-list">
+                                <li>Arquitectura de microservicios con Docker</li>
+                                <li>Procesamiento asíncrono con RabbitMQ</li>
+                                <li>Almacenamiento en MongoDB para datos no estructurados</li>
+                                <li>Caché con Redis para optimizar consultas frecuentes</li>
+                                <li>Monitoreo con Prometheus y Grafana</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-tech">
+                            <div class="tech-label">Tecnologías:</div>
+                            <div class="tech-badges">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">FastAPI</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">RabbitMQ</span>
+                                <span class="tech-badge">MongoDB</span>
+                                <span class="tech-badge">Redis</span>
+                            </div>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/tunombre/data-processor" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                <span>Ver en GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" x2="20" y1="19" y2="19"></line></svg>
+                            <h3 class="project-title">CLI para Automatización de Despliegues</h3>
+                        </div>
+
+                        <p class="project-description">
+                            Herramienta de línea de comandos para automatizar despliegues en diferentes entornos (desarrollo,
+                            staging, producción). Integra con servicios de CI/CD y plataformas cloud.
+                        </p>
+
+                        <div class="project-features">
+                            <div class="feature-label">Características principales:</div>
+                            <ul class="feature-list">
+                                <li>Configuración mediante archivos YAML</li>
+                                <li>Soporte para múltiples proveedores cloud (AWS, GCP, Azure)</li>
+                                <li>Integración con GitHub Actions y GitLab CI</li>
+                                <li>Rollbacks automáticos en caso de fallos</li>
+                                <li>Notificaciones por Slack y email</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-tech">
+                            <div class="tech-label">Tecnologías:</div>
+                            <div class="tech-badges">
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">TypeScript</span>
+                                <span class="tech-badge">AWS SDK</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">CI/CD</span>
+                            </div>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/tunombre/deploy-cli" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                <span>Ver en GitHub</span>
+                            </a>
+                            <a href="https://www.npmjs.com/package/deploy-cli-example" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+                                <span>Ver en NPM</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Personal Endeavors -->
+            <section id="endeavors" class="section">
+                <h2 class="section-title">Personal Endeavors</h2>
+                <div class="section-title-underline"></div>
+
+                <div class="endeavors-grid">
+                    <div class="endeavor-card">
+                        <div class="endeavor-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                        </div>
+                        <div class="endeavor-content">
+                            <h3 class="endeavor-title">Open-Source Contributions</h3>
+                            <p class="endeavor-description">
+                                Contribuyendo a proyectos de código abierto y explorando nuevas tecnologías para ampliar mis
+                                conocimientos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="endeavor-card">
+                        <div class="endeavor-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        </div>
+                        <div class="endeavor-content">
+                            <h3 class="endeavor-title">Automatización y Scripts</h3>
+                            <p class="endeavor-description">
+                                Creando scripts y herramientas para automatizar tareas y mejorar la eficiencia en el desarrollo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <h2 class="section-title">Contact</h2>
+                <div class="section-title-underline"></div>
+
+                <div class="contact-container">
+                    <div class="contact-grid">
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            </div>
+                            <div class="contact-method-details">
+                                <p class="contact-method-label">Email</p>
+                                <a href="mailto:tunombre@ejemplo.com" class="contact-method-value">
+                                    tunombre@ejemplo.com
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div class="contact-method-details">
+                                <p class="contact-method-label">Teléfono</p>
+                                <a href="tel:+34123456789" class="contact-method-value">
+                                    +34 123 456 789
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                            </div>
+                            <div class="contact-method-details">
+                                <p class="contact-method-label">GitHub</p>
+                                <a href="https://github.com/tunombre" target="_blank" rel="noopener noreferrer" class="contact-method-value">
+                                    github.com/tunombre
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </div>
+                            <div class="contact-method-details">
+                                <p class="contact-method-label">LinkedIn</p>
+                                <a href="https://linkedin.com/in/tunombre" target="_blank" rel="noopener noreferrer" class="contact-method-value">
+                                    linkedin.com/in/tunombre
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-cta">
+                        <p class="contact-cta-text">
+                            ¿Interesado en trabajar juntos? ¡Contáctame por cualquiera de estos medios!
+                        </p>
+                        <div class="contact-cta-buttons">
+                            <a href="mailto:tunombre@ejemplo.com" class="cta-button primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                                Enviar Email
+                            </a>
+                            <a href="https://linkedin.com/in/tunombre" target="_blank" rel="noopener noreferrer" class="cta-button secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                Conectar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-</footer>
+</div>
 
 <script src="script.js"></script>
 </body>
